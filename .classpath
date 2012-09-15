@@ -18,5 +18,6 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/AndroidShapes/libs-docs/guava-13.0-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="libs/joda-time-2.1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

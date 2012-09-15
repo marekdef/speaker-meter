@@ -3,7 +3,8 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:id="@+id/speaker_info" >
+    android:id="@+id/speaker_info"
+    android:padding="3dp">
 
     <TextView
         android:id="@+id/textViewPresentation"
