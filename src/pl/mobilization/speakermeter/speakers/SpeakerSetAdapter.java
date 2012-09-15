@@ -1,7 +1,6 @@
 package pl.mobilization.speakermeter.speakers;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
@@ -85,6 +84,7 @@ public class SpeakerSetAdapter extends BaseAdapter {
 
 		textViewSpeaker.setText(speaker.getName());
 		textViewPresentation.setText(speaker.getPresentation());
+		
 		String venue = speaker.getVenue();
 		textViewRoom.setText(Strings.isNullOrEmpty(venue) ? "" : inflater
 				.getContext().getString(R.string.room, venue));
@@ -92,7 +92,7 @@ public class SpeakerSetAdapter extends BaseAdapter {
 		Log.d(TAG, speaker + speaker.getStart_time().toGMTString());
 		Log.d(TAG, speaker + speaker.getEnd_time().toGMTString());
 		
-		//This is tricky thing. Server stores times in UTC not in Europe/Warsaw need to convert now to UTC now and then check
+		//This is tricky thing. Server stores times in UTC not in Europe/Warsaw need to convert now to UTC now and then check inclusion
 		DateTime dtPolishTime = new DateTime();
 	    DateTime dtUTC = dtPolishTime.withZoneRetainFields(DateTimeZone.UTC);
 	    Date nowInUTC = dtUTC.toDate();
@@ -106,6 +106,7 @@ public class SpeakerSetAdapter extends BaseAdapter {
 					android.R.color.black));
 		}
 
+		//using UTC server so this is formatted as UTC
 		CharSequence startTime = timeInstance.format(speaker.getStart_time());
 		CharSequence endTime = timeInstance.format(speaker.getEnd_time());
 
