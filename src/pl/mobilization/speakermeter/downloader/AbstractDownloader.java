@@ -60,20 +60,6 @@ public abstract class AbstractDownloader<T> implements Runnable, Future<T> {
 
 	}
 
-	//
-	// private String getExceptionString(Exception e) {
-	// if (e instanceof IOException) {
-	// return getResources().getString(
-	// R.string.problem_connection, e.getLocalizedMessage());
-	// }
-	// if (e instanceof JsonParseException) {
-	// return getEnclosingClass().getResources().getString(
-	// R.string.problem_json, e.getLocalizedMessage());
-	// }
-	// return getEnclosingClass().getResources().getString(
-	// R.string.problem_uknown, e.getLocalizedMessage());
-	// }
-
 	public abstract void processAnswer(String json) throws JsonSyntaxException;
 
 	public void run() {
@@ -104,7 +90,7 @@ public abstract class AbstractDownloader<T> implements Runnable, Future<T> {
 				return;
 
 			String json = extractPageAsString(response);
-
+			
 			processAnswer(json);
 		} catch (Exception e) {
 			Log.e(TAG, "Exception occured during processing response", e);

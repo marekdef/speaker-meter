@@ -10,6 +10,7 @@ import pl.mobilization.speakermeter.SpeakerMeterApplication;
 import pl.mobilization.speakermeter.dao.Speaker;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class VoteUpdateDownloader extends AbstractDownloader<Speaker> implements
 		Runnable {
@@ -29,7 +30,7 @@ public class VoteUpdateDownloader extends AbstractDownloader<Speaker> implements
 
 	@Override
 	public void processAnswer(String json) {
-		Gson gson = new Gson();
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
 		final Speaker updatedSpeaker = gson.fromJson(json, Speaker.class);
 		setResult(updatedSpeaker);
 	}

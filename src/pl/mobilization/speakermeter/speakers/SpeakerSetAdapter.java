@@ -48,8 +48,6 @@ public class SpeakerSetAdapter extends BaseAdapter {
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-		timeInstance.setTimeZone(TimeZone.getTimeZone("UTC"));
-
 		backingSet.addAll(list);
 	}
 
@@ -92,10 +90,7 @@ public class SpeakerSetAdapter extends BaseAdapter {
 		Log.d(TAG, speaker + speaker.getStart_time().toGMTString());
 		Log.d(TAG, speaker + speaker.getEnd_time().toGMTString());
 		
-		//This is tricky thing. Server stores times in UTC not in Europe/Warsaw need to convert now to UTC now and then check inclusion
-		DateTime dtPolishTime = new DateTime();
-	    DateTime dtUTC = dtPolishTime.withZoneRetainFields(DateTimeZone.UTC);
-	    Date nowInUTC = dtUTC.toDate();
+	    Date nowInUTC = new Date();
 
 		if (nowInUTC.after(speaker.getStart_time())
 				&& nowInUTC.before(speaker.getEnd_time())) {
@@ -106,7 +101,6 @@ public class SpeakerSetAdapter extends BaseAdapter {
 					android.R.color.black));
 		}
 
-		//using UTC server so this is formatted as UTC
 		CharSequence startTime = timeInstance.format(speaker.getStart_time());
 		CharSequence endTime = timeInstance.format(speaker.getEnd_time());
 
