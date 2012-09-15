@@ -5,11 +5,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Set;
-import java.util.TimeZone;
 import java.util.TreeSet;
-
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
 
 import pl.mobilization.speakermeter.R;
 import pl.mobilization.speakermeter.dao.Speaker;
