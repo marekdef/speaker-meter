@@ -20,4 +20,10 @@
     <string name="venues">All venues</string>
     <string name="dismiss">Dismiss</string>
     <string name="room">Room %s</string>
+    <string name="presentation_name">Presentation name</string>
+    <string name="speaker_name">Speaker name</string>
+    <string name="loading">Loading..</string>
+    <string name="mobilization">mobilization</string>
+    <string name="mobilization_logo_description">mobilization logo</string>
+    <string name="image_who_description">image who</string>
 </resources>

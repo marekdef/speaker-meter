@@ -9,15 +9,14 @@
         android:id="@+id/textViewPresentation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Presentation name"
+        android:text="@string/presentation_name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/textViewSpeaker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:text="Speaker name"
+        android:text="@string/speaker_name"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <RelativeLayout
@@ -30,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="08:30 - 09:30"
+            android:text="@string/loading"
                         android:layout_marginLeft="10dp"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -41,7 +40,7 @@
             android:layout_alignBottom="@+id/textViewTime"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:text="F2"
+            android:text="@string/loading"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </RelativeLayout>

@@ -10,13 +10,15 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:src="@drawable/mobilization_splash"
-        android:gravity="center" />
+        android:gravity="center" android:contentDescription="@string/mobilization_logo_description"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/mobilization" />
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/mobilization" 
+        android:contentDescription="@string/mobilization"/>
    
 </RelativeLayout>
