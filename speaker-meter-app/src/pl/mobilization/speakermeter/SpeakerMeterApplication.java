@@ -101,8 +101,7 @@ public class SpeakerMeterApplication extends Application {
 	}
 
 	public void launchSpeakersUpdate() {
-		final SpeakerListDownloader speakerUpdateDownloader = new SpeakerListDownloader(
-				this);
+		final SpeakerListDownloader speakerUpdateDownloader = new SpeakerListDownloader();
 
 		if (this.speakerUpdate != null) {
 			this.speakerUpdate.cancel(true);
