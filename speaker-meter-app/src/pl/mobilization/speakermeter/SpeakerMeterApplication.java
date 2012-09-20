@@ -120,7 +120,8 @@ public class SpeakerMeterApplication extends Application {
 				}
 				try {
 					Speaker[] speakers = speakerUpdateDownloader.get();
-					speakerDao.insertOrReplaceInTx(speakers);
+					if(speakers != null)
+						speakerDao.insertOrReplaceInTx(speakers);
 				} catch (InterruptedException e) {
 				} catch (ExecutionException e) {
 					speakerError = getExceptionString(e.getCause());
@@ -163,7 +164,8 @@ public class SpeakerMeterApplication extends Application {
 				}
 				try {
 					Speaker speaker = voteUpdate.get();
-					speakerDao.insertOrReplace(speaker);
+					if(speaker != null)
+						speakerDao.insertOrReplace(speaker);
 				} catch (InterruptedException e) {
 				} catch (ExecutionException e) {
 					voteError = getExceptionString(e.getCause());
