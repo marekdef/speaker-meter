@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="refresh">Odśwież</string>
-    <string name="app_name">Speaker meter</string>
     <string name="voteup">Głosuj na tak</string>
     <string name="votedown">Głosuj na nie</string>
     <string name="votes" formatted="false">%d głosów na tak %d głosów na nie</string>
@@ -20,4 +19,6 @@
     <string name="venues">Wszystkie sale</string>
     <string name="dismiss">Schowaj</string>
     <string name="room">Sala %s</string>
+    <string name="sponsors_and_partners">Sponsorzy i partnerzy</string>
+    <string name="sponsors_and_partners_thank">Dziękujemy sponsorom i partnerom za pomoc w organizacji konferencji</string>
 </resources>

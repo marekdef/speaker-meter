@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="refresh">Refresh</string>
-    <string name="app_name">Speaker meter</string>
+    <string name="app_name">Mobilization Speaker Meter</string>
     <string name="voteup">Vote up</string>
     <string name="votedown">Vote down</string>
     <string name="votes" formatted="false">%d votes up %d votes down</string>
@@ -26,4 +26,13 @@
     <string name="mobilization">mobilization</string>
     <string name="mobilization_logo_description">mobilization logo</string>
     <string name="image_who_description">image who</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="sponsors_and_partners">Sponsors &amp; partners</string>
+    <string name="gold">Gold sponsors</string>
+    <string name="platinum">Platinum sponsors</string>
+    <string name="silver">Silver sponsors</string>
+    <string name="partners">Partners</string>
+    <string name="sponsors_and_partners_thank">We are very grateful to ours sponsors and partners for their support in organizing the conference.</string>
+
 </resources>
