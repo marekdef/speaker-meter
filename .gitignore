@@ -21,3 +21,6 @@ results/
 
 #eclipse
 .settings/
+
+#maven
+target/
