@@ -2,7 +2,6 @@ package pl.mobilization.speakermeter.venues;
 
 import java.util.Collection;
 
-import pl.mobilization.speakermeter.SponsorsPartnersActivity;
 import pl.mobilization.speakermeter.R;
 import pl.mobilization.speakermeter.SpeakerMeterApplication;
 import pl.mobilization.speakermeter.speakers.SpeakerListActivity;
@@ -109,9 +108,6 @@ public class VenueTabActivity extends RoboTabActivity {
 		switch (item.getItemId()) {
 		case R.id.refresh:
 			launchJsonUpdate();
-			break;
-		case R.id.sponsors_and_partners:
-			startActivity(new Intent(this, SponsorsPartnersActivity.class));
 			break;
 		}
 		

@@ -3,9 +3,5 @@
 	<item android:id="@+id/refresh"
           android:icon="@drawable/ic_menu_refresh"
           android:title="@string/refresh" android:visible="true"/>
-	
-	<item android:id="@+id/sponsors_and_partners"
-	    android:icon="@android:drawable/ic_menu_info_details"
-          android:title="@string/sponsors_and_partners" android:visible="true"/>
 
 </menu>
