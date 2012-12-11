@@ -1,11 +1,14 @@
 require 'calabash-android/management/adb'
+require 'calabash-android/operations'
+include Calabash::Android::Operations
 
 Before do |scenario|
-
-  return if scenario.failed? #No need to start the server is anything before this has failed.
   start_test_server_in_background
 end
 
-After do
-    shutdown_test_server
+After do |scenario|
+  if scenario.failed?
+    screenshot_embed
+  end
+  shutdown_test_server
 end
