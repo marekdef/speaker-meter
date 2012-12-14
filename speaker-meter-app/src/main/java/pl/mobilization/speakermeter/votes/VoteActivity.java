@@ -60,6 +60,11 @@ public class VoteActivity extends RoboActivity implements OnClickListener,
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+	
+		//workaround for null views
+		if(root == null) {
+			setContentView(R.layout.vote);
+		}
 
 		refreshHandler = new Handler();
 		root.getViewTreeObserver().addOnGlobalLayoutListener(this);
